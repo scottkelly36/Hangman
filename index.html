@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Marmelad&family=Montserrat:wght@100;400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+		<script src="./script.js" defer></script>
+		<title>Hangman</title>
+	</head>
+	<body>
+		<h1 class="heading">Hangman</h1>
+		<p class="message">
+			Find the hidden Word- Guess a letter
+		</p>
+		<section class="game-container">
+			<svg
+				height="250"
+				width="200"
+				class="figure-container"
+			>
+				<!--stand-->
+				<line x1="60" y1="20" x2="140" y2="20" />
+				<line x1="140" y1="20" x2="140" y2="50" />
+				<line x1="60" y1="20" x2="60" y2="230" />
+				<line x1="20" y1="230" x2="100" y2="230" />
+
+				<!--head-->
+				<circle
+					cx="140"
+					cy="70"
+					r="20"
+					class="figure-part"
+				/>
+				<!--body-->
+				<line
+					x1="140"
+					y1="90"
+					x2="140"
+					y2="150"
+					class="figure-part"
+				/>
+				<!--arms-->
+				<line
+					x1="140"
+					y1="120"
+					x2="120"
+					y2="100"
+					class="figure-part"
+				/>
+				<line
+					x1="140"
+					y1="120"
+					x2="160"
+					y2="100"
+					class="figure-part"
+				/>
+				<!--legs-->
+				<line
+					x1="140"
+					y1="150"
+					x2="120"
+					y2="180"
+					class="figure-part"
+				/>
+				<line
+					x1="140"
+					y1="150"
+					x2="160"
+					y2="180"
+					class="figure-part"
+				/>
+			</svg>
+			<div class="wrong-letters-container">
+				<div id="wrong-letters"></div>
+				<h2 class="wrong-heading">Wrong Letters</h2>
+				<ul class="wrong-letter-list">
+					<li class="letter">a</li>
+					<li class="letter">b</li>
+					<li class="letter">f</li>
+					<li class="letter">g</li>
+					<li class="letter">t</li>
+				</ul>
+			</div>
+
+			<div class="word" id="word">
+				<div class="letter">a</div>
+				<div class="letter">c</div>
+				<div class="letter">x</div>
+				<div class="letter">i</div>
+				<div class="letter">a</div>
+			</div>
+		</section>
+		<section class="popup-container" id="popup-container">
+			<div class="pop-up">
+				<h2 id="final-message">YOU WON!!</h2>
+			</div>
+		</section>
+	</body>
+</html>
