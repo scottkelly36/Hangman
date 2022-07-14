@@ -12,8 +12,18 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
-
+.heading {
+	margin: 20px 0;
+}
+.message {
+	margin: 20px 0;
+}
+.game-container {
+	padding: 20px 30px;
+	width: fit-content;
+}
 .figure-container {
 	fill: transparent;
 	stroke: azure;
@@ -33,8 +43,88 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
+#wrong-letters {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.popup-container {
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	background-color: rgba(34, 102, 194, 0.6);
+	padding: 50px 90px;
+	width: fit-content;
+	text-align: center;
+	height: fit-content;
+	border-radius: 5px;
+	display: none;
+}
+.pop-up {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.final-message {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.letter {
+	font-weight: 600;
+	width: 20px;
+	height: 20px;
+	font-size: 1.2rem;
+}
+#replay {
+	cursor: pointer;
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	color: black;
+	font-weight: 600;
+}
+
+#replay:active {
+	transform: scale(0.97);
+}
+.word {
+	margin: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 1.4rem;
+}
+.right-letter {
+	border-bottom: azure solid 2px;
+	padding-bottom: 5px;
+	width: 30px;
+	height: 40px;
+	text-align: center;
+	margin-right: 5px;
+}
+.space {
+	width: 30px;
+}
 .wrong-letter-list {
 	list-style: none;
 	display: flex;
 	justify-content: space-evenly;
+}
+
+.notification-container {
+	background-color: rgba(34, 102, 194, 0.3);
+	border-radius: 10px 10px 0 0;
+	padding: 20px 50px;
+	bottom: -60px;
+	position: absolute;
+	transition: tranform 0.3s ease-in-out;
+}
+
+.notification-container.show {
+	transform: translateY(-60px);
 }
