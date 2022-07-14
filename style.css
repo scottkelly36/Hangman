@@ -54,7 +54,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	background-color: rgba(34, 102, 194, 0.6);
+	background-color: rgba(34, 102, 194, 0.7);
 	padding: 50px 90px;
 	width: fit-content;
 	text-align: center;
@@ -67,6 +67,7 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	flex-direction: column;
+	height: 200px;
 }
 .final-message {
 	margin-top: 40px;

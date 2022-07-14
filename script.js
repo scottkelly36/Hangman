@@ -77,14 +77,13 @@ function displayLetters(letter) {
 		correctLetters.length ===
 		selectedWord.split(' ').join('').length
 	) {
-		console.log(
-			correctLetters.length,
-			selectedWord.split(' ').join('').length
-		);
 		popup.style.display = 'flex';
 	}
 }
-
+console.log(
+	correctLetters.length,
+	selectedWord.split(' ').join('').length
+);
 //updated wrong letters array
 function updateWrongLetters(letter) {
 	//display worng letters
@@ -150,7 +149,7 @@ window.addEventListener('keydown', (e) => {
 				!wrongLettersArray.includes(letter.toUpperCase())
 			) {
 				wrongLettersArray.push(letter.toUpperCase());
-				updateWrongLetters(letter);
+				updateWrongLetters(letter.toUpperCase());
 			} else {
 				showNotification();
 			}
